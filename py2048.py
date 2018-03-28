@@ -6,7 +6,7 @@ from enum import Enum
 class Direction(Enum):
     LEFT, UP, RIGHT, DOWN = range(4)
 
-class Game():
+class Game(object):
     def __init__(self):
         self.size = 4
         self.start_tiles = 2
@@ -61,7 +61,7 @@ class Game():
         return np.logical_and(grid[:, :-1]==0, grid[:, 1:]>0).any() or \
                np.logical_and(grid[:, :-1]>0, grid[:, 1:]==grid[:, :-1]).any()
 
-class Console():
+class Console(object):
     def __init__(self):
         self.game = Game()
         self.intro = 'Welcome to Py2048!\n' + \

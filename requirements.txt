@@ -1,0 +1,4 @@
+numpy
+tensroflow
+keras
+h5py
